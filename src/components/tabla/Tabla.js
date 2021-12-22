@@ -4,7 +4,7 @@ import { Table } from "react-bootstrap";
 const Tabla = ({
   columnas = [],
   registros = [],
-  botones = {botones},
+  botones = { botones },
   bus,
   campos = [],
 }) => {
@@ -34,11 +34,13 @@ const Tabla = ({
               })}
               {botones ? (
                 <td>
-                  <button id={registro._id} onClick={click_actualizar}>
-                    Actualizar
-                  </button>
-                  <button id={registro._id} onClick={click_eliminar}>
-                    Eliminar
+                  <button className="btn btn-outline-light" id={registro._id} onClick={click_actualizar}>
+                    <img src="/img/edit-text-ico.png" alt="" width="30" height="30"
+                      className="d-inline-block align-text-middle" />
+                  </button>{" "}
+                  <button className="btn btn-outline-light" id={registro._id} onClick={click_eliminar}>
+                    <img src="/img/deleted-ico.png" alt="" width="30" height="30"
+                      className="d-inline-block align-text-middle" />
                   </button>
                 </td>
               ) : null}
