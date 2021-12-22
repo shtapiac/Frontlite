@@ -15,7 +15,7 @@ const UsuarioCrearExt = () => {
       .then((res) => res.json())
       .catch((error) => console.error("Error:", error))
       .then((response) => {
-        //window.location.href = "/usuario";
+        alert('usuario creado')
       });
   }
   return (
